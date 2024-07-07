@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Travel Trek - Connecting Travellers</title>
+  <link rel="stylesheet" type="text/css" href="page2.css">
+</head>
+<body>
+  <header>
+    <h1>Travel Trek</h1>
+    <img src="hero-image.png" alt="Travek Trek Logo" style="float:left;width:150px;height:80px;">
+    <nav>
+      <ul style="text-align:center">
+        <li>
+          <body>
+            <button onclick="revertToPage1()">
+            <a href="#">HOME</a>
+            </button>
+          
+            <script>
+              function revertToPage1() {
+                // Reload the page
+                window.location.reload();
+          
+                // Or navigate to the first page
+                window.location.href = 'index.html';
+              }
+            </script>
+          </body>
+          </html>
+          
+        </li>
+        <li>
+          <body>
+            <button id="scrollButton" onclick="scrollpage()">
+              <a href="#">DESTINATIONS</a>
+              <script>
+    // Show the scroll button when scrolling down
+    window.onscroll = function() {
+      showScrollButton();
+    };
+    
+    function showScrollButton() {
+      var scrollButton = document.getElementById("scrollButton");
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollButton.style.display = "block";
+      } else {
+        scrollButton.style.display = "none";
+      }
+    }
+    function scrollPage() {
+      // Change the value 200 to the desired number of pixels to scroll
+      window.scrollBy(0, 200);
+    }
+
+              </script>
+            </button>
+          </body>
+        </li>
+        <li>
+          <button onclick=" ">
+            <a href="#">MY TRIPS</a>
+          </button>
+        </li>
+      </ul>
+    </nav>
+   
+
+  </header>
+
+  <main>
+    <section id="hero">
+      <h2>Connect with Travellers to Your Destination</h2>
+      <p>Find travel companions who are going to the same destination as you!</p>
+
+      <form id="travelForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="Source">Source:</label>
+        <select id="Source" required>
+          <option value="">Select a Source</option>
+          <option value="VIT Vellore University">VIT Vellore University</option>
+          <option value="Bengaluru Airport">Bengaluru Airport</option>
+          <option value="Katpadi Junction">Katpadi Junction</option>
+          <option value="CMC Hospital">CMC Hospital</option>
+        </select>
+
+        <label for="destination">Destination:</label>
+        <select id="destination" required>
+          <option value="">Select a destination</option>
+          <option value="VIT Vellore University">VIT Vellore University</option>
+          <option value="Chennai Airport">Chennai Airport</option>
+          <option value="Bengaluru Airport">Bengaluru Airport</option>
+          <option value="Katpadi Junction">Katpadi Junction</option>
+          <option value="CMC Hospital">CMC Hospital</option>
+        </select>
+        
+        <label for="numTravelers">Number of Travelers:</label>
+        <select id="numTravelers" required>
+          <option value="">Select the number of travelers</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="tel" id="phoneNumber" required pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number">
+
+        <label for="departureDate">Departure Date:</label>
+        <input type="date" id="departureDate" required>
+
+        <label for="departureTime">Departure Time:</label>
+        <br>
+        <input type="time" id="departureTime" required>
+
+        <button type="submit" id="searchButton">SEARCH</button>
+      </form>
+      <a href="page3.html" style="color:White;"> Wanna Collab?</a>
+      
+    
+      
+      
+    </section>
+  </main>
+  <h3 style="text-align:center">Reviews</h3>
+  <ul>
+    <li>"I had a great time traveling with Travel Trek! I met some amazing people and we had a lot of fun exploring our destination together." - Virat Kolhi.</li>
+    <li>"Travel Trek made my trip so much easier! They handled all the logistics, so I could just relax and enjoy my vacation." - Narendra Yogi.</li>
+    <li>"I would definitely recommend Travel Trek to anyone looking for a great travel experience!" - Miit Daga.</li>
+  </ul>
+
+  <h3 style="text-align:center">FAQ</h3>
+  <ul>
+    <li><b>What are the benefits of using Travel Trek?</b></li>
+    <ul>
+      <li>Convenience: Travel Trek handles all the logistics of your trip, so you can relax and enjoy your vacation.</li>
+      <li>Safety: Travel Trek only partners with reputable travel agencies and tour operators.</li>
+      <li>Affordability: Travel Trek offers competitive prices on travel packages.</li>
+      <li>Flexibility: Travel Trek can customize your trip to fit your specific needs and budget.</li>
+    </ul>
+    <li><b>How do I book a trip with Travel Trek?</b></li>
+    <ul>
+      <li>To book a trip with Travel Trek, simply visit our website and fill out a travel request form. We will then contact you to discuss your travel needs and put together a personalized itinerary.</li>
+    </ul>
+    <li><b>What are the payment options for Travel Trek?</b></li>
+    <ul>
+      <li>Travel Trek accepts a variety of payment options, including credit cards, debit cards, and PayPal.</li>
+    </ul>
+    <li><b>What is the cancellation policy for Travel Trek?</b></li>
+    <ul>
+      <li>Our cancellation policy is flexible and depends on the type of travel package you book. Please contact us for more information.</li>
+    </ul>
+    <li><b>What are the travel restrictions for Travel Trek?</b></li>
+    <ul>
+      <li>Travel restrictions vary depending on the destination you are traveling to. Please contact us for more information.</li>
+    </ul>
+  </ul>
+  <footer>
+    <p>&copy; 2023 Travel Trek. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("travelForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent form submission
+  
+      // Get input values
+      var name = document.getElementById("name").value;
+      var source = document.getElementById("Source").value;
+      var destination = document.getElementById("destination").value;
+      var numTravelers = document.getElementById("numTravelers").value;
+      var phoneNumber = document.getElementById("phoneNumber").value;
+      var departureDate = document.getElementById("departureDate").value;
+      var departureTime = document.getElementById("departureTime").value;
+  
+      // Log the values for demonstration purposes
+      console.log("Name: " + name);
+      console.log("Source: " + source);
+      console.log("Destination: " + destination);
+      console.log("Number of Travelers: " + numTravelers);
+      console.log("Phone Number: " + phoneNumber);
+      console.log("Departure Date: " + departureDate);
+      console.log("Departure Time: " + departureTime);
+  
+      // You can perform further processing or send the data to a server here
+  
+      // Clear form inputs
+      document.getElementById("name").value = "";
+      document.getElementById("Source").value = "";
+      document.getElementById("destination").value = "";
+      document.getElementById("numTravelers").value = "";
+      document.getElementById("phoneNumber").value = "";
+      document.getElementById("departureDate").value = "";
+      document.getElementById("departureTime").value = "";
+  
+      // Redirect to the next page
+      window.location.href = "next-page.html"; // Replace "next-page.html" with the actual URL of the next page
+      
+    });
+    <link rel="stylesheet" type="text/css" href="page2.css">
+
+  </script>
+  
+</body>
+</html>

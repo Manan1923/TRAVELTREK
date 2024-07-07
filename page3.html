@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brand Collaboration Inquiries</title>
+  <link rel="stylesheet" href="page3.css">
+</head>
+<body>
+  <header>
+    <h1>Brand Collaboration Inquiries</h1>
+    <p>Welcome to our landing page for brand and club collaborations. Fill out the form below to inquire about potential business deals with us.</p>
+  </header>
+
+  <main>
+    <form action="submit_form.php" method="POST">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="company">Company or Club Name:</label>
+      <input type="text" id="company" name="company" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <input type="submit" value="Submit Inquiry">
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Travel Trek. All rights reserved.</p>
+  </footer>
+</body>
+</html>
